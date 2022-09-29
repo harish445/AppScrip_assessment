@@ -78,15 +78,15 @@ class NurseUpdate(View):
 def getRoutes(request):
     routes = {
         # API's for NURSE
-        'get' : '/create-nurse/',
-        'post' : '/create-nurse/',
-        'patch' : '/create-nurse/id',
-        'delete' : '/create-nurse/id',
-        'GET' : '/appointment/create-appointment/',
-        'GET' : '/appointment/get-appointment/',
-        'PATCH' : '/appointment/update-appointment/id',
-        'DELETE' : '/appointment/update-appointment/id',
-        'POST' : '/appointment/create-appointment/',
+        'get' : '/create-nurse/',       # get all nurse
+        'post' : '/create-nurse/',         # create a nurse
+        'patch' : '/create-nurse/id',     # update a nurse
+        'delete' : '/create-nurse/id',       # delete a nurse
+        'GET' : '/appointment/create-appointment/',      # get number of nurses without an appointment
+        'GET' : '/appointment/get-appointment/',           # get number of nurses with appointment
+        'PATCH' : '/appointment/update-appointment/id',    # update an appointment
+        'DELETE' : '/appointment/update-appointment/id',   # delete an appointment
+        'POST' : '/appointment/create-appointment/',      # create an appointment
     }
 
     return JsonResponse(routes)
